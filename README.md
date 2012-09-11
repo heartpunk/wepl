@@ -1,4 +1,5 @@
-WEPL a repl for the web
+
+WEPL: a REPL for the web
 ========================
 
 WEPL is a simple {express,node}.js app whose sole purpose is to provide a playground for learning how to code that doesn't require knowing anything in advance.  The goal is to minimize the useless cognitive load just long enough to get an idea what you're doing.
