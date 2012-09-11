@@ -1,15 +1,8 @@
 var express = require('express');
 var app = express();
 
+var port = process.env.PORT || 3000;
 var global = this;
-
-app.configure('prod', function () {
-  app.set('port', process.env.PORT);
-});
-
-app.configure(function () {
-  app.set('port', 3000);
-});
 
 app.get('/', function(req, res){
   if (req.query.methodVal) {
@@ -31,5 +24,5 @@ app.get('/', function(req, res){
 });
 
 
-app.listen(app.get('port'));
-console.log('Listening on port ' + app.get('port'));
+app.listen(port);
+console.log('Listening on port ' + port);
