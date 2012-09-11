@@ -4,7 +4,7 @@ var app = express();
 var global = this;
 
 app.configure('prod', function () {
-  app.set('port', 80);
+  app.set('port', process.env.PORT);
 });
 
 app.configure(function () {
