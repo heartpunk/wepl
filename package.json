@@ -1,9 +1,7 @@
 {
   "name": "wepl",
   "version": "0.0.1",
-  "dependencies": {
-    "express": "3.0.x"
-  },
+  "dependencies": { },
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
