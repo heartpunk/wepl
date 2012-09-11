@@ -1,0 +1,19 @@
+doctype
+
+- if (typeof code == 'undefined') {code = ''}
+- if (typeof result == 'undefined') {result = ''}
+
+body
+  div#input
+    h4 new code
+    form(action='/')
+      div
+        textarea(cols=100, rows=50, name='methodBody')= code
+      div
+        button(type='submit') upload your code
+  div#old_code
+    h4 old code
+    pre= code
+  div#result
+    h4 result
+    pre= result
