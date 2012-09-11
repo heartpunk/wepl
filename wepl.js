@@ -3,6 +3,14 @@ var app = express();
 
 var global = this;
 
+app.configure('prod', function () {
+  app.set('port', 80);
+});
+
+app.configure(function () {
+  app.set('port', 3000);
+});
+
 app.get('/', function(req, res){
   if (req.query.methodVal) {
     app.get(('/' + req.query.methodName), function(req1,res1) {
@@ -23,5 +31,5 @@ app.get('/', function(req, res){
 });
 
 
-app.listen(4000);
-console.log('Listening on port 4000');
+app.listen(app.get('port'));
+console.log('Listening on port ' + app.get('port'));
