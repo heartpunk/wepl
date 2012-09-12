@@ -10,7 +10,7 @@ head
       var result;
 
       try {
-        result = eval(event.target.value);
+        result = JSON.stringify(eval(event.target.value));
         if (typeof result != 'undefined') {
           $('div#live_result pre').replaceWith('<pre>' + result + '</pre>');
         }
