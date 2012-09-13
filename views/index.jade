@@ -28,13 +28,6 @@ head
     });
 body
   | <a href="https://github.com/tehgeekmeister/wepl"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-  div#input
-    h4 new code
-    form#code(action='/')
-      div
-        textarea(cols=100, rows=30, name='methodBody')= code
-      div
-        button(type='submit') upload your code
   div#explanation
     h4 explanation
     p
@@ -46,6 +39,13 @@ body
     p
       :markdown
         it's a tradeoff, and i think i made the right choice.  there's no other place you can play around with server side code on the web, that i'm aware of.  (also, if you're careful, you can play around with client side javascript here.  can you figure it out?)
+  div#input
+    h4 new code
+    form#code(action='/')
+      div
+        textarea(cols=100, rows=30, name='methodBody')= code
+      div
+        button(type='submit') upload your code
   div#old_code
     h4 old code
     pre= code
