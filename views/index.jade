@@ -13,9 +13,12 @@ head
         result = JSON.stringify(eval(event.target.value));
         if (typeof result != 'undefined') {
           $('div#live_result pre').replaceWith('<pre>' + result + '</pre>');
+          $('div#live_errors pre').replaceWith('<pre></pre>');
         }
       }
-      catch (err) { }
+      catch (err) {
+        $('div#live_errors pre').replaceWith('<pre>' + err + '</pre>');
+      }
     }
 
     $(document).ready(function () {
@@ -51,4 +54,7 @@ body
     pre= result
   div#live_result
     h4 live result
+    pre
+  div#live_errors
+    h4 live errors
     pre
